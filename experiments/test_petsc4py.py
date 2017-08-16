@@ -11,8 +11,6 @@ def test_solve_with_petsc():
 
     mat = PETSc.Mat().createAIJ(N, comm=COMM)
 
-    # could also use `create` and then setSizes below:
-    # mat.setSizes(((2, None), (2, None)))
     mat.setPreallocationNNZ(2)
 
     # There must be a better way to fill the matrix structure...
