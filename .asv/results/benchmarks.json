@@ -1,0 +1,55 @@
+{
+    "benchmarks.TimeSuite.time_petsc_cython_30": {
+        "code": "def time_petsc_cython_30(self):\n    run_solver(solver_type='petsc', kernel_type='cython', nx=30, ny=30)\n",
+        "goal_time": 2.0,
+        "name": "benchmarks.TimeSuite.time_petsc_cython_30",
+        "number": 0,
+        "param_names": [],
+        "params": [],
+        "pretty_name": "benchmarks.TimeSuite.time_petsc_cython_30",
+        "repeat": 0,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds"
+    },
+    "benchmarks.TimeSuite.time_petsc_numpy_30": {
+        "code": "def time_petsc_numpy_30(self):\n    run_solver(solver_type='petsc', kernel_type='numpy', nx=30, ny=30)\n",
+        "goal_time": 2.0,
+        "name": "benchmarks.TimeSuite.time_petsc_numpy_30",
+        "number": 0,
+        "param_names": [],
+        "params": [],
+        "pretty_name": "benchmarks.TimeSuite.time_petsc_numpy_30",
+        "repeat": 0,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds"
+    },
+    "benchmarks.TimeSuite.time_petsc_python_30": {
+        "code": "def time_petsc_python_30(self):\n    run_solver(solver_type='petsc', kernel_type='python', nx=30, ny=30)\n",
+        "goal_time": 2.0,
+        "name": "benchmarks.TimeSuite.time_petsc_python_30",
+        "number": 0,
+        "param_names": [],
+        "params": [],
+        "pretty_name": "benchmarks.TimeSuite.time_petsc_python_30",
+        "repeat": 0,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds"
+    },
+    "benchmarks.TimeSuite.time_scipy_python_10": {
+        "code": "def time_scipy_python_10(self):\n    run_solver(solver_type='scipy', kernel_type='python', nx=10, ny=10)\n",
+        "goal_time": 2.0,
+        "name": "benchmarks.TimeSuite.time_scipy_python_10",
+        "number": 0,
+        "param_names": [],
+        "params": [],
+        "pretty_name": "benchmarks.TimeSuite.time_scipy_python_10",
+        "repeat": 0,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds"
+    },
+    "version": 1
+}

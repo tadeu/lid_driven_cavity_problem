@@ -1,36 +1,18 @@
-# Write the benchmarking functions here.
-# See "Writing benchmarks" in the asv docs for more information.
+from experiments.run_solver import run_solver
 
 
 class TimeSuite:
-    """
-    An example benchmark that times the performance of various kinds
-    of iterating over dictionaries in Python.
-    """
     def setup(self):
-        self.d = {}
-        for x in range(500):
-            self.d[x] = None
+        pass
 
-    def time_keys(self):
-        for key in self.d.keys():
-            pass
+    def time_scipy_python_10(self):
+        run_solver(solver_type='scipy', kernel_type='python', nx=10, ny=10)
 
-    def time_iterkeys(self):
-        for key in self.d.iterkeys():
-            pass
+    def time_petsc_python_30(self):
+        run_solver(solver_type='petsc', kernel_type='python', nx=30, ny=30)
 
-    def time_range(self):
-        d = self.d
-        for key in range(500):
-            x = d[key]
+    def time_petsc_numpy_30(self):
+        run_solver(solver_type='petsc', kernel_type='numpy', nx=30, ny=30)
 
-    def time_xrange(self):
-        d = self.d
-        for key in xrange(500):
-            x = d[key]
-
-
-class MemSuite:
-    def mem_list(self):
-        return [0] * 256
+    def time_petsc_cython_30(self):
+        run_solver(solver_type='petsc', kernel_type='cython', nx=30, ny=30)

@@ -19,6 +19,17 @@ Comparing results with Ghia, Ghia and Shin (1982):
 Instructions
 ------------
 
+In order to configure the environment, execute:
+
+    $ conda env create
+    $ activate lid_driven_cavity_problem
+
+
 In order to build the Cython code, execute:
 
-    $ python setup.py build_ext --inplace
+    $ inv cython
+
+
+To run the benchmarks:
+
+    $ inv benchmarks

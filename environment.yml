@@ -1,7 +1,8 @@
 name: lid_driven_cavity_problem
 channels:
-  - esss
+  - esss  # petsc4py, petsc
   - defaults
+  - conda-forge  # pybind11
 dependencies:
   - python==3.5.3
   - pytest
@@ -9,3 +10,7 @@ dependencies:
   - matplotlib
   - petsc4py
   - cython
+  - pybind11
+  - cmake  # for building pybind11 sources
+  - asv
+  - invoke
